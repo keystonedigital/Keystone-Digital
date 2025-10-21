@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Keystone Digital - Building Digital Foundations for Modern Businesses. Professional web development agency co-founded by Jake and Dylan.">
+    <meta name="keywords" content="web development, UI/UX design, SEO, responsive design, digital agency">
+    <meta name="author" content="Keystone Digital">
+    <title>Keystone Digital - Building Digital Foundations for Modern Businesses</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="ksdStylesheet.css">
+
+</head>
+<body class="bg-slate-50 text-slate-900">
+    
+    <!-- Navigation -->
+    <nav class="navbar fixed top-0 left-0 right-0 z-50 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="text-2xl font-bold text-white">
+                <span class="text-sky-400">Keystone</span> Digital
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-white hover:text-sky-400 transition-colors">Home</a>
+                <a href="#about" class="text-white hover:text-sky-400 transition-colors">About</a>
+                <a href="#services" class="text-white hover:text-sky-400 transition-colors">Services</a>
+                <a href="#portfolio" class="text-white hover:text-sky-400 transition-colors">Portfolio</a>
+                <a href="#why-choose-us" class="text-white hover:text-sky-400 transition-colors">Why Us</a>
+                <a href="#contact" class="btn-primary text-white px-6 py-2 rounded-full font-medium">Contact</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white text-xl" aria-label="Toggle mobile menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="mobile-menu md:hidden fixed top-0 right-0 h-full w-64 bg-slate-800 z-50 p-6">
+            <div class="flex justify-end mb-8">
+                <button id="close-mobile-menu" class="text-white text-xl" aria-label="Close mobile menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="flex flex-col space-y-6">
+                <a href="#home" class="text-white hover:text-sky-400 transition-colors mobile-nav-link">Home</a>
+                <a href="#about" class="text-white hover:text-sky-400 transition-colors mobile-nav-link">About</a>
+                <a href="#services" class="text-white hover:text-sky-400 transition-colors mobile-nav-link">Services</a>
+                <a href="#portfolio" class="text-white hover:text-sky-400 transition-colors mobile-nav-link">Portfolio</a>
+                <a href="#why-choose-us" class="text-white hover:text-sky-400 transition-colors mobile-nav-link">Why Us</a>
+                <a href="#contact" class="btn-primary text-white px-6 py-3 rounded-full font-medium text-center mobile-nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="floating absolute top-20 left-10 w-20 h-20 bg-sky-400 rounded-full"></div>
+            <div class="floating absolute top-40 right-20 w-16 h-16 bg-cyan-400 rounded-full" style="animation-delay: -1s;"></div>
+            <div class="floating absolute bottom-40 left-20 w-12 h-12 bg-blue-400 rounded-full" style="animation-delay: -2s;"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto text-center px-6 relative z-10">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 fade-in">
+                <span class="block">Keystone</span>
+                <span class="text-sky-400">Digital</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-sky-100 mb-8 typing-text max-w-2xl mx-auto">
+                Building Digital Foundations for Modern Businesses
+            </p>
+            
+            <p class="text-lg text-slate-200 mb-12 max-w-2xl mx-auto fade-in">
+                We combine cutting-edge technical development with strategic business insights to create websites that don't just look great – they drive results.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in">
+                <a href="#services" class="btn-primary text-white px-8 py-4 rounded-full font-medium text-lg inline-flex items-center justify-center">
+                    <i class="fas fa-rocket mr-2"></i>
+                    Explore Our Services
+                </a>
+                <a href="#portfolio" class="bg-white/10 backdrop-blur text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-white/20 transition-all inline-flex items-center justify-center">
+                    <i class="fas fa-eye mr-2"></i>
+                    View Our Work
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <a href="#about" aria-label="Scroll to about section">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-6 fade-in">
+                    Meet the <span class="text-gradient">Founders</span>
+                </h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto fade-in">
+                    Keystone Digital was born from the collaboration of two passionate professionals who believe that exceptional websites require both technical excellence and strategic business thinking.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="slide-in-left">
+                    <div class="bg-gradient-to-br from-sky-50 to-blue-50 p-8 rounded-2xl border border-sky-200">
+                        <div class="w-24 h-24 bg-gradient-to-br from-sky-400 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 mx-auto">
+                            J
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800 text-center mb-2">Jake</h3>
+                        <p class="text-lg text-sky-600 text-center mb-4 font-medium">Developer &amp; Technical Lead</p>
+                        <p class="text-slate-600 text-center leading-relaxed">
+                            Expert in modern web technologies and scalable solutions. Jake brings years of experience in creating high-performance websites that handle complex business requirements with elegant code.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="slide-in-right">
+                    <div class="bg-gradient-to-br from-slate-50 to-slate-100 p-8 rounded-2xl border border-slate-200">
+                        <div class="w-24 h-24 bg-gradient-to-br from-slate-600 to-slate-800 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 mx-auto">
+                            D
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-800 text-center mb-2">Dylan</h3>
+                        <p class="text-lg text-slate-600 text-center mb-4 font-medium">Business Manager &amp; Strategy</p>
+                        <p class="text-slate-600 text-center leading-relaxed">
+                            Focused on client relations and business growth strategies. Dylan ensures every project aligns with client goals and delivers measurable business value through strategic digital solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16 fade-in">
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                    Together, Jake and Dylan have successfully launched <strong class="text-sky-600">50+ websites</strong> for businesses of all sizes, combining technical innovation with strategic business insights.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-6 fade-in">
+                    Our <span class="text-gradient">Services</span>
+                </h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto fade-in">
+                    We offer comprehensive web development services designed to help your business establish a strong digital presence and achieve sustainable growth.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg fade-in">
+                    <div class="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-600 rounded-lg flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">Custom Web Development</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Tailored websites built with modern technologies and best practices for optimal performance and scalability.
+                    </p>
+                </div>
+                
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg fade-in" style="animation-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-cyan-400 to-sky-600 rounded-lg flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">UI/UX Design &amp; Optimization</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        User-centered design that converts visitors into customers through intuitive interfaces and engaging experiences.
+                    </p>
+                </div>
+                
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg fade-in" style="animation-delay: 0.4s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">SEO-Ready Development</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Websites optimized for search engines from day one, ensuring maximum visibility and organic traffic growth.
+                    </p>
+                </div>
+                
+                <div class="service-card bg-white p-8 rounded-xl shadow-lg fade-in" style="animation-delay: 0.6s;">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">Responsive &amp; Mobile-First</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Seamless experience across all devices and screen sizes with mobile-first design approach for modern users.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-6 fade-in">
+                    Our <span class="text-gradient">Portfolio</span>
+                </h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto fade-in">
+                    Discover our recent projects and see how we've helped businesses establish their digital presence with stunning, high-performing websites.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden fade-in">
+                    <div class="relative h-48 bg-gradient-to-br from-blue-500 to-cyan-600">
+                        <div class="portfolio-overlay absolute inset-0 bg-slate-900/80 flex items-center justify-center">
+                            <button class="bg-white text-slate-800 px-6 py-3 rounded-full font-medium hover:bg-sky-100 transition-colors">
+                                <i class="fas fa-eye mr-2"></i>
+                                View Case Study
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-sm text-sky-600 font-medium">Corporate Website</span>
+                        <h3 class="text-xl font-bold text-slate-800 mt-2 mb-3">TechStart Solutions</h3>
+                        <p class="text-slate-600">Modern corporate site with advanced animations and interactive elements.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden fade-in" style="animation-delay: 0.2s;">
+                    <div class="relative h-48 bg-gradient-to-br from-pink-500 to-rose-600">
+                        <div class="portfolio-overlay absolute inset-0 bg-slate-900/80 flex items-center justify-center">
+                            <button class="bg-white text-slate-800 px-6 py-3 rounded-full font-medium hover:bg-sky-100 transition-colors">
+                                <i class="fas fa-eye mr-2"></i>
+                                View Case Study
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-sm text-sky-600 font-medium">E-commerce</span>
+                        <h3 class="text-xl font-bold text-slate-800 mt-2 mb-3">Bloom Boutique</h3>
+                        <p class="text-slate-600">Fashion e-commerce with custom shopping experience and seamless checkout.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden fade-in" style="animation-delay: 0.4s;">
+                    <div class="relative h-48 bg-gradient-to-br from-purple-500 to-indigo-600">
+                        <div class="portfolio-overlay absolute inset-0 bg-slate-900/80 flex items-center justify-center">
+                            <button class="bg-white text-slate-800 px-6 py-3 rounded-full font-medium hover:bg-sky-100 transition-colors">
+                                <i class="fas fa-eye mr-2"></i>
+                                View Case Study
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-sm text-sky-600 font-medium">Portfolio</span>
+                        <h3 class="text-xl font-bold text-slate-800 mt-2 mb-3">Creative Studio Pro</h3>
+                        <p class="text-slate-600">Creative agency showcase with dynamic galleries and smooth animations.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden fade-in" style="animation-delay: 0.6s;">
+                    <div class="relative h-48 bg-gradient-to-br from-green-500 to-emerald-600">
+                        <div class="portfolio-overlay absolute inset-0 bg-slate-900/80 flex items-center justify-center">
+                            <button class="bg-white text-slate-800 px-6 py-3 rounded-full font-medium hover:bg-sky-100 transition-colors">
+                                <i class="fas fa-eye mr-2"></i>
+                                View Case Study
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-sm text-sky-600 font-medium">Healthcare</span>
+                        <h3 class="text-xl font-bold text-slate-800 mt-2 mb-3">HealthCare Plus</h3>
+                        <p class="text-slate-600">Medical practice website with appointment booking and patient portal.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden fade-in" style="animation-delay: 0.8s;">
+                    <div class="relative h-48 bg-gradient-to-br from-orange-500 to-red-600">
+                        <div class="portfolio-overlay absolute inset-0 bg-slate-900/80 flex items-center justify-center">
+                            <button class="bg-white text-slate-800 px-6 py-3 rounded-full font-medium hover:bg-sky-100 transition-colors">
+                                <i class="fas fa-eye mr-2"></i>
+                                View Case Study
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-sm text-sky-600 font-medium">Restaurant</span>
+                        <h3 class="text-xl font-bold text-slate-800 mt-2 mb-3">FoodieHub Restaurant</h3>
+                        <p class="text-slate-600">Restaurant website with online ordering system and reservation management.</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-card bg-white rounded-xl shadow-lg overflow-hidden fade-in" style="animation-delay: 1s;">
+                    <div class="relative h-48 bg-gradient-to-br from-slate-600 to-slate-800">
+                        <div class="portfolio-overlay absolute inset-0 bg-slate-900/80 flex items-center justify-center">
+                            <button class="bg-white text-slate-800 px-6 py-3 rounded-full font-medium hover:bg-sky-100 transition-colors">
+                                <i class="fas fa-eye mr-2"></i>
+                                View Case Study
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-sm text-sky-600 font-medium">Legal Services</span>
+                        <h3 class="text-xl font-bold text-slate-800 mt-2 mb-3">Legal Associates</h3>
+                        <p class="text-slate-600">Law firm website with client portal integration and case management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why Choose Us Section -->
+    <section id="why-choose-us" class="py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 fade-in">
+                    Why Choose <span class="text-sky-400">Keystone Digital</span>
+                </h2>
+                <p class="text-xl text-slate-300 max-w-3xl mx-auto fade-in">
+                    We don't just build websites – we create digital experiences that drive business growth and deliver measurable results for our clients.
+                </p>
+            </div>
+            
+            <!-- Statistics -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="text-center fade-in">
+                    <div class="counter text-sky-400 mb-2" data-target="73">0</div>
+                    <div class="text-2xl font-bold mb-2">%</div>
+                    <p class="text-slate-300">of businesses now have websites</p>
+                </div>
+                
+                <div class="text-center fade-in" style="animation-delay: 0.2s;">
+                    <div class="counter text-cyan-400 mb-2" data-target="25">0</div>
+                    <div class="text-2xl font-bold mb-2">%</div>
+                    <p class="text-slate-300">of businesses grow faster with a website</p>
+                </div>
+                
+                <div class="text-center fade-in" style="animation-delay: 0.4s;">
+                    <div class="counter text-blue-400 mb-2" data-target="75">0</div>
+                    <div class="text-2xl font-bold mb-2">%</div>
+                    <p class="text-slate-300">of people judge credibility based on website design</p>
+                </div>
+                
+                <div class="text-center fade-in" style="animation-delay: 0.6s;">
+                    <div class="counter text-indigo-400 mb-2" data-target="58">0</div>
+                    <div class="text-2xl font-bold mb-2">%</div>
+                    <p class="text-slate-300">of web traffic now comes from mobile</p>
+                </div>
+            </div>
+            
+            <!-- Benefits -->
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="slide-in-left">
+                    <h3 class="text-2xl font-bold mb-6">What Sets Us Apart</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-sky-400 mr-3 mt-1"></i>
+                            <span class="text-slate-300">Modern technologies and best practices for future-proof solutions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-sky-400 mr-3 mt-1"></i>
+                            <span class="text-slate-300">Strategic business approach combined with technical expertise</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-sky-400 mr-3 mt-1"></i>
+                            <span class="text-slate-300">Personalized attention and dedicated support throughout the process</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-sky-400 mr-3 mt-1"></i>
+                            <span class="text-slate-300">SEO optimization and performance enhancement from the ground up</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="slide-in-right">
+                    <h3 class="text-2xl font-bold mb-6">Our Commitment</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-cyan-400 mr-3 mt-1"></i>
+                            <span class="text-slate-300">Transparent communication and regular project updates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-cyan-400 mr-3 mt-1"></i>
+                            <span class="text-slate-300">On-time delivery with thorough testing and quality assurance</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-cyan-400 mr-3 mt-1"></i>
+                            <span class="text-slate-300">Ongoing support and maintenance for peace of mind</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-cyan-400 mr-3 mt-1"></i>
+                            <span class="text-slate-300">Results-driven approach focused on your business goals</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-6 fade-in">
+                    Let's Start Your <span class="text-gradient">Digital Journey</span>
+                </h2>
+                <p class="text-xl text-slate-600 fade-in">
+                    Ready to elevate your business with a professional website? Contact us today for a free consultation.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="slide-in-left">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6">Get In Touch</h3>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-sky-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium text-slate-800">Email</p>
+                                <p class="text-slate-600">dylanandjakebusiness@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-sky-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium text-slate-800">Phone</p>
+                                <p class="text-slate-600">(555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-clock text-sky-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium text-slate-800">Response Time</p>
+                                <p class="text-slate-600">Within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-12 h-12 bg-sky-600 rounded-lg flex items-center justify-center text-white hover:bg-sky-700 transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-sky-600 rounded-lg flex items-center justify-center text-white hover:bg-sky-700 transition-colors" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-sky-600 rounded-lg flex items-center justify-center text-white hover:bg-sky-700 transition-colors" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="slide-in-right">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-slate-700 mb-2">Name *</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-slate-700 mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
+                        </div>
+                        
+                        <div>
+                            <label for="project" class="block text-sm font-medium text-slate-700 mb-2">Project Type</label>
+                            <select id="project" name="project" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all">
+                                <option value="">Select a project type</option>
+                                <option value="new-website">New Website</option>
+                                <option value="redesign">Website Redesign</option>
+                                <option value="ecommerce">E-commerce</option>
+                                <option value="maintenance">Maintenance &amp; Updates</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-700 mb-2">Message *</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary w-full text-white px-6 py-4 rounded-lg font-medium text-lg">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Send Message
+                        </button>
+                    </form>
+                    
+                    <div id="form-feedback" class="hidden mt-4 p-4 rounded-lg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold mb-4">
+                        <span class="text-sky-400">Keystone</span> Digital
+                    </div>
+                    <p class="text-slate-400 mb-4">Building Digital Foundations for Modern Businesses</p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="text-slate-400 hover:text-sky-400 transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-sky-400 transition-colors" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-sky-400 transition-colors" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="#services" class="hover:text-sky-400 transition-colors">Web Development</a></li>
+                        <li><a href="#services" class="hover:text-sky-400 transition-colors">UI/UX Design</a></li>
+                        <li><a href="#services" class="hover:text-sky-400 transition-colors">SEO Optimization</a></li>
+                        <li><a href="#services" class="hover:text-sky-400 transition-colors">Mobile Development</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="#about" class="hover:text-sky-400 transition-colors">About Us</a></li>
+                        <li><a href="#portfolio" class="hover:text-sky-400 transition-colors">Portfolio</a></li>
+                        <li><a href="#why-choose-us" class="hover:text-sky-400 transition-colors">Why Choose Us</a></li>
+                        <li><a href="#contact" class="hover:text-sky-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-slate-400">
+                        <li>hello@keystonedigital.com</li>
+                        <li>(555) 123-4567</li>
+                        <li>Response within 24 hours</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 mt-8 pt-8 text-center text-slate-400">
+                <p>&copy; 2025 Keystone Digital. All rights reserved. Built with passion by Jake &amp; Dylan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="ksdScript.js"></script>
+    
+
+</body>
+</html>
